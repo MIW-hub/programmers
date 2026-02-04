@@ -6,7 +6,8 @@ using namespace std;
 
 string solution(string s) {
     string answer = "";
-    sort(s.begin(), s.end(),greater<char>());
+    sort(s.rbegin(), s.rend());
+    
     for (char a : s) {
         if (!isupper(a)) {
             answer += a;
